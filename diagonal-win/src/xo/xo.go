@@ -4,6 +4,7 @@ type XOGAME struct{
 	Table [3][3]string
 	Round int
 	MaxRound int
+	Winner string
 }
 func NewXOGame() XOGAME{
 	return XOGAME{MaxRound:9} 
@@ -51,16 +52,25 @@ func getCell(number int) Cell{
 	return numberCell[number]
 }
 
-func (xo XOGAME)CheckWinner() bool{
+func (xo *XOGAME)CheckWinner() bool{
 	if xo.Table[0][0] == xo.Table[1][1] && xo.Table[1][1] == xo.Table[2][2] {
 		if xo.Table[0][0] == "O" || xo.Table[0][0] == "X" {
+			xo.Winner = xo.Table[0][0]
 			return true
 		}
 	}
 	if xo.Table[0][2] == xo.Table[1][1] && xo.Table[1][1] == xo.Table[2][0] {
 		if xo.Table[0][0] == "O" || xo.Table[0][0] == "X" {
+			xo.Winner = xo.Table[0][0]
 			return true
 		}
 	}
 	return false
+}
+
+func (xo XOGAME) GetWinner() string{
+	if xo.Winner == ""{
+		return "DRAW"
+	}
+	return xo.Winner + " WIN"
 }

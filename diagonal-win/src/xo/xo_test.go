@@ -33,3 +33,18 @@ func Test_CheckWinner_Should_Be_False(t *testing.T){
 		t.Errorf("Should be %v but got %v",expected, actual)
 	}
 }
+
+func Test_GetWinner_Should_Be_O_Win(t *testing.T){
+	expected := "O WIN"
+	xo := NewXOGame()
+	xo.InputPlayerO(5)
+	xo.InputPlayerX(7)
+	xo.InputPlayerO(1)
+	xo.InputPlayerX(8)
+	xo.InputPlayerO(9)
+	xo.CheckWinner()
+	actual := xo.GetWinner()
+	if expected != actual {
+		t.Errorf("Should be %v but got %v",expected, actual)
+	}
+}
