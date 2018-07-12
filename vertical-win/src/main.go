@@ -21,6 +21,11 @@ func main()  {
         if vertical.DuplicateMark(row,column,board) == false{
             playerSelectCell := vertical.Mark("Player1",row,column)
             board = append(board,playerSelectCell)
+            playerWinner = vertical.GetWinner(board)
+        }
+
+        if playerWinner != ""{
+            break
         }
 
         fmt.Println("Player 2 Enter Row: ")
@@ -38,5 +43,5 @@ func main()  {
 
     }
 
-    fmt.Println(playerWinner)
+    fmt.Println("Winner",playerWinner)
 }
