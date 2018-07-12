@@ -19,7 +19,7 @@ func (xo *XOGame) ChoosePosition(playerName string, position int) []int {
 	return xo.Step
 
 }
-func SetPlayerSequency(playerName1, playerName2 string) []Player {
+func (xo *XOGame) SetPlayerSequency(playerName1, playerName2 string) []Player {
 	return []Player{
 		{
 			Name:     playerName1,

@@ -18,6 +18,7 @@ func Test_ChoosePosition_Input_Jay_1_Aun_5_Should_be_Array_15(t *testing.T) {
 }
 
 func Test_SetPlayerSequency_Input_Jay_Aun_Should_Be_Struct_Players(t *testing.T) {
+	xo := XOGame{}
 	playerName1 := "JAY"
 	playerName2 := "AUN"
 	expected := []Player{
@@ -33,7 +34,7 @@ func Test_SetPlayerSequency_Input_Jay_Aun_Should_Be_Struct_Players(t *testing.T)
 		},
 	}
 
-	actual := SetPlayerSequency(playerName1, playerName2)
+	actual := xo.SetPlayerSequency(playerName1, playerName2)
 
 	if fmt.Sprintf("%v", expected) != fmt.Sprintf("%v", actual) {
 		t.Errorf("expected %v but got %v", expected, actual)
