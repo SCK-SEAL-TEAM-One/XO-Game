@@ -23,7 +23,6 @@ func main()  {
             board = append(board,playerSelectCell)
             playerWinner = vertical.GetWinner(board)
             fmt.Println("win",playerWinner)
-            vertical.CreateBoard(board)
         }
 
         fmt.Println("Player 2 Enter Row: ")
@@ -39,7 +38,6 @@ func main()  {
             playerWinner = vertical.GetWinner(board)
             fmt.Println("win",playerWinner)
             fmt.Println(board)  
-            vertical.CreateBoard(board)
         }
 
     }
