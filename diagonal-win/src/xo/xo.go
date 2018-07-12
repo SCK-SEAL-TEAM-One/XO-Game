@@ -75,6 +75,6 @@ func (xo XOGAME) GetWinner() string{
 	return xo.Winner + " WIN"
 }
 
-func (xo XOGAME) IsContinueGame() bool{
+func (xo *XOGAME) IsContinueGame() bool{
 	return xo.Round < xo.MaxRound && !xo.CheckWinner()
 }
