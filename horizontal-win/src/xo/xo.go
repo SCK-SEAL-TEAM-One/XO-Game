@@ -10,6 +10,11 @@ type Player struct {
 }
 
 func (xo *XOGame) ChoosePosition(playerName string, position int) []int {
+	for _, valueStep := range xo.Step {
+		if valueStep == position {
+			return xo.Step
+		}
+	}
 	xo.Step = append(xo.Step, position)
 	return xo.Step
 

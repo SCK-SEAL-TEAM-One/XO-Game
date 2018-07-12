@@ -16,6 +16,7 @@ func Test_ChoosePosition_Input_Jay_1_Aun_5_Should_be_Array_15(t *testing.T) {
 		t.Errorf("Shoud Be %v but got %v", expected, actualJay)
 	}
 }
+
 func Test_SetPlayerSequency_Input_Jay_Aun_Should_Be_Struct_Players(t *testing.T) {
 	playerName1 := "JAY"
 	playerName2 := "AUN"
