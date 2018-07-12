@@ -35,3 +35,4 @@ func Test_GetWinner_Input_Struct_Board_Should_Be_Player1(t *testing.T){
 		t.Errorf("should be %s but it is %s ", expected, actual)
 	}
 }
+
