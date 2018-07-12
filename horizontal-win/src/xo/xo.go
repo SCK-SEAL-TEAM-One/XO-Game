@@ -28,7 +28,7 @@ func (xo *XOGame) ChoosePosition(playerName string, position int) []int {
 	return xo.Step
 
 }
-func (xo *XOGame) SetPlayerSequency(playerName1, playerName2 string) []Player {
+func (xo XOGame) SetPlayerSequency(playerName1, playerName2 string) []Player {
 	return []Player{
 		{
 			Name:     playerName1,
@@ -43,7 +43,7 @@ func (xo *XOGame) SetPlayerSequency(playerName1, playerName2 string) []Player {
 	}
 }
 
-func GetPlayerWin(step []int) bool {
+func (xo XOGame) GetPlayerWin(step []int) bool {
 	var oddstep []int
 	var evenstep []int
 	for index, value := range step {

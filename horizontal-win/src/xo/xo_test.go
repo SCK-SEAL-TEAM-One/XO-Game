@@ -42,10 +42,11 @@ func Test_SetPlayerSequency_Input_Jay_Aun_Should_Be_Struct_Players(t *testing.T)
 }
 
 func Test_GetPlayerWin_Input_array_1_5_3_4_2_Should_Be_True(t *testing.T) {
+	xo := XOGame{}
 	step := []int{1, 5, 3, 4, 2}
 	expected := true
 
-	actual := GetPlayerWin(step)
+	actual := xo.GetPlayerWin(step)
 
 	if expected != actual {
 		t.Errorf("expected %v but got %v", expected, actual)
