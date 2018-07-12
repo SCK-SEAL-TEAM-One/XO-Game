@@ -1,7 +1,7 @@
 package vertical
 
 import (
-    "model"
+	"model"
 )
 
 func DuplicateMark(row int, column int, board []model.Cell) bool {
@@ -33,7 +33,7 @@ func GetWinner(board []model.Cell) string {
 
 				increaseVerticalPlayer(&vertical1Player1)
 
-				if vertical1Player1 == 3 {
+				if cheakPlayerwinner(&vertical1Player1) {
 					return cellValue.MarkedPlayer
 				}
 			}
