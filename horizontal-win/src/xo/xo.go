@@ -6,13 +6,27 @@ import (
 	"strings"
 )
 
+type XOGame struct {
+	Step []int
+}
+
 type Player struct {
 	Name     string
 	Symbol   string
 	Sequence string
 }
 
-func SetPlayerSequency(playerName1, playerName2 string) []Player {
+func (xo *XOGame) ChoosePosition(playerName string, position int) []int {
+	for _, valueStep := range xo.Step {
+		if valueStep == position {
+			return xo.Step
+		}
+	}
+	xo.Step = append(xo.Step, position)
+	return xo.Step
+
+}
+func (xo *XOGame) SetPlayerSequency(playerName1, playerName2 string) []Player {
 	return []Player{
 		{
 			Name:     playerName1,
