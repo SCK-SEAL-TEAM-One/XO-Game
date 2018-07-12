@@ -9,3 +9,8 @@ type XOGAME struct{
 func NewXOGame() XOGAME{
 	return XOGAME{MaxRound:9} 
 } 
+
+func InputPlayerO() bool{
+	return false
+
+}
