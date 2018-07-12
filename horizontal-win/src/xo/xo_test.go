@@ -27,3 +27,14 @@ func Test_SetPlayerSequency_Input_Jay_Aun_Should_Be_Struct_Players(t *testing.T)
 		t.Errorf("expected %v but got %v", expected, actual)
 	}
 }
+
+func Test_GetPlayerWin_Input_array_1_5_3_4_2_Should_Be_True(t *testing.T) {
+	step := []int{1, 5, 3, 4, 2}
+	expected := true
+
+	actual := GetPlayerWin(step)
+
+	if expected != actual {
+		t.Errorf("expected %v but got %v", expected, actual)
+	}
+}
