@@ -11,7 +11,7 @@ func Test_InputPlayerO_Input_5_Should_Be_True(t *testing.T){
 	actual := xo.InputPlayerO(input) 
 	if expected != actual {
 
-		t.Errorf("Should be %v but got %v %v",expected, actual, xo.Table)
+		t.Errorf("Should be %v but got %v",expected, actual)
 	}
 }
 
@@ -21,6 +21,15 @@ func Test_InputPlayerX_Input_7_Should_Be_True(t *testing.T){
 	xo := NewXOGame() 
 	actual := xo.InputPlayerX(input) 
 	if expected != actual {
-		t.Errorf("Should be %v but got %v %v",expected, actual, xo.Table)
+		t.Errorf("Should be %v but got %v",expected, actual)
+	}
+}
+
+func Test_CheckWinner_Should_Be_False(t *testing.T){
+	expected := false
+	xo := NewXOGame()
+	actual := xo.CheckWinner()
+	if expected != actual {
+		t.Errorf("Should be %v but got %v",expected, actual)
 	}
 }

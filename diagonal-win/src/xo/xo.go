@@ -50,3 +50,17 @@ func getCell(number int) Cell{
 	}  
 	return numberCell[number]
 }
+
+func (xo XOGAME)CheckWinner() bool{
+	if xo.Table[0][0] == xo.Table[1][1] && xo.Table[1][1] == xo.Table[2][2] {
+		if xo.Table[0][0] == "O" || xo.Table[0][0] == "X" {
+			return true
+		}
+	}
+	if xo.Table[0][2] == xo.Table[1][1] && xo.Table[1][1] == xo.Table[2][0] {
+		if xo.Table[0][0] == "O" || xo.Table[0][0] == "X" {
+			return true
+		}
+	}
+	return false
+}
