@@ -24,6 +24,10 @@ func main()  {
             playerWinner = vertical.GetWinner(board)
         }
 
+        if playerWinner != ""{
+            break
+        }
+
         fmt.Println("Player 2 Enter Row: ")
         var rowPlayer2 int
         fmt.Scanln(&rowPlayer2)
@@ -39,5 +43,5 @@ func main()  {
 
     }
 
-    fmt.Println(playerWinner)
+    fmt.Println("Winner",playerWinner)
 }
