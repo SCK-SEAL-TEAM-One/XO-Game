@@ -9,6 +9,8 @@ type Player struct {
 	Sequence string
 }
 
+const GAMEONEROUND = 9
+
 func (xo *XOGame) ChoosePosition(playerName string, position int) []int {
 	for _, valueStep := range xo.Step {
 		if valueStep == position {
