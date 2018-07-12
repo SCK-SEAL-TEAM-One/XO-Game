@@ -8,12 +8,12 @@ import (
 func Test_ChoosePosition_Input_Jay_1_Aun_5_Should_be_Array_15(t *testing.T) {
 	xo := XOGame{}
 	expected := []int{1, 5}
+
 	xo.ChoosePosition("Jay", 1)
+	actual := xo.ChoosePosition("Aun", 5)
 
-	actualJay := xo.ChoosePosition("Aun", 5)
-
-	if fmt.Sprintf("%v", expected) != fmt.Sprintf("%v", actualJay) {
-		t.Errorf("Shoud Be %v but got %v", expected, actualJay)
+	if fmt.Sprintf("%v", expected) != fmt.Sprintf("%v", actual) {
+		t.Errorf("Shoud Be %v but got %v", expected, actual)
 	}
 }
 
